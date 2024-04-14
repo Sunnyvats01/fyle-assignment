@@ -12,6 +12,7 @@
         integrity="sha512-UuQ/zJlbMVAw/UU8vVBhnI4op+/tFOpQZVT+FormmIEhRSCnJWyHiBbEVgM4Uztsht41f3FzVWgLuwzUqOObKw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
     <link rel="stylesheet" href="css/style.css">
     <title>Assignment</title>
 
@@ -22,24 +23,107 @@
     <div class="container">
         <div class="wrapper">
             <form action="">
-                <label for="Income" style="width: 66%;">Enter gross annual income <i class="fa-regular fa-circle-question " id="icon"></i><div class="toolbox"><p>Gross annual income is your total salary in a year before any deductions</p> </div></label>
-                <input type="text" name="gross-income" id="income" placeholder="Enter gross annual income" required>
+                <label for="Income" style="width: 66%;">Enter gross annual income <i
+                        class="fa-regular fa-circle-question " id="icon"></i>
+                    <div class="toolbox">
+                        <p>Gross annual income is your total salary in a year before any deductions</p>
+                    </div>
+                </label>
+                <div class="input-group"> <input type="text" name="gross-income" id="grossAnnualIncome"
+                        placeholder="Enter gross annual income" required>
+                    <i id="incomeErrorIcon" class=" fa-solid fa-circle-exclamation error-icon"></i>
+                    <span class="tooltip">Enter a valid gross annual income</span>
 
-                <label for="Income" style="width: 48%;">Enter extra income <i class="fa-regular fa-circle-question"
-                    ></i><div class="toolbox"><p>Additional earnings beyond regular salary, like side jobs or investments</p> </div></label>
-                <input type="text" name="additional-incom" id="Additional" placeholder="Enter annual income from other sources" required>
 
-                <label for="Income" style="width: 41%;">Enter age group <i class="fa-regular fa-circle-question"
-                   ></i><div class="toolbox"><p>Your age in numbers</p> </div></label>
-                <input type="number" name="age" id="age" required>
+                </div>
 
-                <label for="Income" style="width: 65%;">Total applicable deductions <i class="fa-regular fa-circle-question"
-                      ></i><div class="toolbox"><p>Gross annual income is your total salary in a year before any deductions</p> </div></label>
-                <input type="text" name="deductions" id="deductions" required>
 
-                <button>Submit</button>
+
+
+
+
+
+
+
+
+
+
+                <label for="Income" style="width: 48%;">Enter extra income <i class="fa-regular fa-circle-question"></i>
+                    <div class="toolbox">
+                        <p>Additional earnings beyond regular salary, like side jobs or investments</p>
+                    </div>
+                </label>
+                <div class="input-group">
+
+                    <input type="text" name="additional-incom" id="extraIncome"
+                        placeholder="Enter annual income from other sources" required>
+                    <i id="extraIncomeErrorIcon" class=" fa-solid fa-circle-exclamation error-icon"></i>
+                    <span class="tooltip">Enter a valid extra income</span>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                <label for="Income" style="width: 41%;">Enter age group <i class="fa-regular fa-circle-question"></i>
+                    <div class="toolbox">
+                        <p>Your age in numbers</p>
+                    </div>
+                </label>
+
+                <div class="input-group">
+                    <input type="text" name="age" id="age" required>
+                    <i id="ageErrorIcon" class="fa-solid  fa-circle-exclamation error-icon"></i>
+                    <span class="tooltip">Enter a valid age</span>
+
+
+
+                </div>
+
+
+
+
+
+                <label for="Income" style="width: 65%;">Total applicable deductions <i
+                        class="fa-regular fa-circle-question"></i>
+                    <div class="toolbox">
+                        <p>Gross annual income is your total salary in a year before any deductions</p>
+                    </div>
+                </label>
+
+                <div class="input-group">
+                    <input type="text" name="deductions" id="deductions" required>
+                    <i id="deductionsErrorIcon" class=" fa-solid fa-circle-exclamation error-icon"></i>
+                    <span class="tooltip">Enter valid deductions</span>
+
+
+                </div>
+
+                <button type="button" id="button" onclick="calculateTax()">Submit</button>
 
             </form>
+
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <h2>Your overall income will be</h2>
+                    <p id="taxResult"></p>
+                    <p>after tax deductions</p>
+                    <button class="close">Close
+
+                </div>
+
+                </button>
+            </div>
         </div>
     </div>
 
