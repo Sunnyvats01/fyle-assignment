@@ -34,7 +34,7 @@ body {
 
 .container .wrapper form label {
     margin-top: 1rem;
-    color: #3e4144;
+    color: #28292b;
 }
 
 .container .wrapper form input {
@@ -53,3 +53,47 @@ body {
     padding: 0.5rem 0;
     border-radius: 5px;
 }
+
+
+.container .wrapper form label  {
+    position: relative;
+}
+
+
+
+
+.toolbox{
+display: none;    
+background-color: #4C5D6B;
+    border-radius: 5px;
+    width: 10rem;
+    position: absolute;
+    left: 80%;
+    bottom: 120%;
+    z-index: 1;
+    transition: ease 0.3s;
+}
+
+.container .wrapper form label i{
+    cursor: pointer;
+    color: #7c848d;
+    z-index: 1;
+}
+.toolbox p{
+    /* width: 100px; */
+    color: rgb(244, 241, 241);
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+
+}
+
+.container .wrapper form label:hover .toolbox{
+
+display: block;
+
+}
+
+
+
+
